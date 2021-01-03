@@ -2,9 +2,11 @@ from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
 
-@app.route("/<name>")
-def home(name):
-    return render_template("index.html", content=name, r=2)
+# @app.route("/<name>")
+# def home(name):
+@app.route("/")
+def home():
+    return render_template("index.html", content=["tim", "Joe", "Party"])
 
 # @app.route("/<name>")
 # def user(name):
