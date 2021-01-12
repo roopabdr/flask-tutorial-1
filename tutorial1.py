@@ -6,7 +6,7 @@ app = Flask(__name__)
 # def home(name):
 @app.route("/")
 def home():
-    return render_template("index.html", content=["tim", "Joe", "Party"])
+    return render_template("index.html", content="Testing")
 
 # @app.route("/<name>")
 # def user(name):
@@ -17,4 +17,4 @@ def home():
 #     return redirect(url_for("user", name="Admin"))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True) # debug=True helps keep the server alive and detect changes as and when they happen 

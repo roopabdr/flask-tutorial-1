@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home page</title>
-</head>
-<body>
-    <h1>Home Page!</h1>
-    <p>{{content}}</p>
-    {%  for x in content %}
-        <p>{{x}}</p>
-    {% endfor %}
-</body>
-</html>
+<!-- inheriting base template -->
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content%}
+<h1>Test h1 tag</h1>
+{% endblock %}
