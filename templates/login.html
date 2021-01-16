@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Login page{% endblock %}
 {% block content %}
+    {%with messages = get_flashed_messages() %} <!-- getting the flash messages if they are sent and display them -->
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 <form action="#" method="POST">
 <p>Name:</p>
 <p><input type="text" name="nm"/></p>
